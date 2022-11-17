@@ -18,11 +18,32 @@ used to synchronize the threads.
 
 __________________________________________________________
 
+Flow and logic:
+
+The the main() function will call the read_files() function.
+There each line will be stored in the file_links array, used
+to find each file.
+
+Then each file will be sent to maps based on the number of files.
+The app_aloc() function decides if the thread is a mapper or
+a reducer. Here the mutex is initialized. If the index is 
+less than the number of mappers then it is a matter thread.
+Otherwise it is a reducer thread. For each one of those threads,
+the role will be either 0 (mapper) or 1 (reducer).
+
+Then the threads will start in the allocate_maps_and_reducers() 
+function. I used a for() to create the threads and then another
+for() to join them. By deciding their role all threads start
+at the same time.
+
+__________________________________________________________
+
 `Mapper thread`
 
 All mapper threads find a perfect powers from input data 
 and store them to linked list.
 These data will be used by reducer threads later.
+
 __________________________________________________________
 
 `Reducer thread`
@@ -41,26 +62,6 @@ For example,
     reducer[1] for exponential 3, reducer[2] for exponential 3 and so on.
         
 They don't need to have a list for them.
-__________________________________________________________
-
-Flow and logic:
-
-The the main() function will call the read_files() function.
-There each line will be stored in the file_links array, used
-to find each file.
-
-Then each file will be sent to maps based on the number of files.
-The app_aloc() function decides if the thread is a mapper or
-a reducer. Here the mutex is initialized. If the index is 
-less than the number of mappers then it is a matter thread.
-Otherwise it is a reducer thread. For each one of those threads,
-the role will be either 0 (mapper) or 1 (reducer).
-
-Then the threads will start in the allocate_maps_and_reducers() 
-function. I used a for() to create the threads and then another
-for() to join them. By deciding their role all threads start
-at the same time. 
-
 
 __________________________________________________________
 
