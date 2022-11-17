@@ -30,7 +30,7 @@ Flow and logic:
 
 The the main() function will call the read_files() function.
 There each line will be stored in the file_links array, used
-to find each file.
+to find each file to be processed.
 
 Then each file will be sent to maps based on the number of files.
 The app_aloc() function decides if the thread is a mapper or
@@ -43,6 +43,9 @@ Then the threads will start in the allocate_maps_and_reducers()
 function. I used a for() to create the threads and then another
 for() to join them. By deciding their role all threads start
 at the same time.
+
+To calculate the time I used time_t to check the difference between
+the start the end of the program.
 
 __________________________________________________________
 
