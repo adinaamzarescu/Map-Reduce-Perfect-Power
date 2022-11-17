@@ -3,6 +3,13 @@
 
 __________________________________________________________
 
+Map-Reducer program to implement a parallel program in 
+Pthreads for finding numbers greater than 0 that are
+perfect powers from a set of files and counting unique 
+values for each exponent.
+
+__________________________________________________________
+
 There are 3 structures in this program.
 
 The first one is a linked list used to store the 
