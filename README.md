@@ -35,7 +35,7 @@ to find each file to be processed.
 Then each file will be sent to maps based on the number of files.
 The app_aloc() function decides if the thread is a mapper or
 a reducer. Here the mutex is initialized. If the index is 
-less than the number of mappers then it is a matter thread.
+less than the number of mappers then it is a mapper thread.
 Otherwise it is a reducer thread. For each one of those threads,
 the role will be either 0 (mapper) or 1 (reducer).
 
