@@ -16,6 +16,7 @@ The first one is a linked list used to store the
 perfect powers for each exponential.
 
 The second one is thread_data_t used for the thread.
+
     * role is used to check if the thread will be used
         for a map or for a reducer
 
