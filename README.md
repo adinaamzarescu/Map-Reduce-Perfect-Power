@@ -56,7 +56,7 @@ have finished and then call the reducer_func().
 
 The files are sent to maps in the allocate_files_to_maps() 
 function. Here depending on the number of files and the 
-number of mappers, in order to distibute them evenly the program
+number of mappers, in order to distribute them evenly the program
 will check if the distribution can be made 1:1. If there are
 more files than mappers then the files_per_map will be 
 number_of_files/number_of_mappers.
