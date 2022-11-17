@@ -1,14 +1,14 @@
 build:
 	@echo "Building..."
-	@gcc -o a.out main.c -lm -Wall -Werror
+	@gcc -o tema1 tema1.c -lm -Wall -Werror
 	@echo "Done"
 
 build_debug:
 	@echo "Building debug..."
-	@gcc -o a.out main.c -lm -Wall -Werror -O0 -g3 -DDEBUG
+	@gcc -o tema1 tema1.c -lm -Wall -Werror -O0 -g3 -DDEBUG
 	@echo "Done"
 
 clean:
 	@echo "Cleaning..."
-	@rm -rf a.out
+	@rm -rf tema1
 	@echo "Done"
