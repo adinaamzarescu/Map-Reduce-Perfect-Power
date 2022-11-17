@@ -51,19 +51,19 @@ __________________________________________________________
 
 ### `Mapper thread`
 
-All mapper threads find a perfect powers from input data 
+All mapper threads find the perfect powers from input data 
 and store them to linked list.
-These data will be used by reducer threads later.
+This data will be used by reducer threads later.
 
 __________________________________________________________
 
 ### `Reducer thread`
 
 All reducer threads can process data once all mapper 
-threads done their job.
+threads have done their job.
 So they wait for condition which the value of mapper_count 
 reach to number_of_mappers.
-Every mapper thread increase mapper_count by 1 when it 
+Every mapper thread increase mapper_count by 1 when it has
 finished, so mapper_count will be number_of_mappers (for example) 
 when all mapper threads are finished.   
 Each reducer will process perfect numbers for its own exponential.
