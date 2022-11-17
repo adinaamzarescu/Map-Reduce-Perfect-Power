@@ -26,7 +26,7 @@ used to synchronize the threads.
 
 __________________________________________________________
 
-#### Flow and logic:
+### Flow and logic:
 
 The the main() function will call the read_files() function.
 There each line will be stored in the file_links array, used
