@@ -69,6 +69,7 @@ when all mapper threads are finished.
 Each reducer will process perfect numbers for its own exponential.
     
 For example,
+
     reducer[0] will process perfect numbers for exponential 2 
     reducer[1] for exponential 3, reducer[2] for exponential 3 and so on.
         
