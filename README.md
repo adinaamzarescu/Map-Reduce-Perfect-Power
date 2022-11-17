@@ -17,8 +17,8 @@ perfect powers for each exponent.
 
 The second one is thread_data_t used for the thread.
 
-    * role is used to check if the thread will be used
-        for a map or for a reducer
+   * role is used to check if the thread will be used
+     for a map or for a reducer
 
 The last one is app_data_t, used to solve the mapper
 and reducer threads. Mutex and condition variable are
