@@ -17,8 +17,8 @@ perfect powers for each exponent.
 
 The second one is thread_data_t used for the thread.
 
-    * role is used to check if the thread will be used
-        for a map or for a reducer
+   * role is used to check if the thread will be used
+     for a map or for a reducer
 
 The last one is app_data_t, used to solve the mapper
 and reducer threads. Mutex and condition variable are
@@ -26,7 +26,7 @@ used to synchronize the threads.
 
 __________________________________________________________
 
-Flow and logic:
+### Flow and logic:
 
 The the main() function will call the read_files() function.
 There each line will be stored in the file_links array, used
@@ -56,7 +56,7 @@ have finished and then call the reducer_func().
 
 The files are sent to maps in the allocate_files_to_maps() 
 function. Here depending on the number of files and the 
-number of mappers, in order to distibute them evenly the program
+number of mappers, in order to distribute them evenly the program
 will check if the distribution can be made 1:1. If there are
 more files than mappers then the files_per_map will be 
 number_of_files/number_of_mappers.
@@ -74,13 +74,13 @@ __________________________________________________________
 
 ### `Mapper thread`
 
-General Idea:
+*General Idea:*
 
 All mapper threads find the perfect powers from input data 
 and store them to linked list.
 This data will be used by reducer threads later.
 
-Code explanation:
+*Code explanation:*
 
 The mapper_func() function will get the number of files.
 Since a single mapper might handle multiple files the
@@ -99,7 +99,7 @@ __________________________________________________________
 
 ### `Reducer thread`
 
-General Idea:
+*General Idea:*
 
 All reducer threads can process data once all mapper 
 threads have done their job.
@@ -116,7 +116,7 @@ For example,
         
 They don't need to have a list for them.
 
-Code explanation:
+*Code explanation:*
 
 The reducer_func() function will get the total count of perfect
 powers for a given exponent. The nums array is used to store
