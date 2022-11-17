@@ -2,11 +2,28 @@
 #### Copyright Adina-Maria Amzarescu
 
 __________________________________________________________
+
+There are 3 structures in this program.
+
+The first one is a linked list used to store the 
+perfect powers for each exponential.
+
+The second one is thread_data_t used for the thread.
+    * role is used to check if the thread will be used
+        for a map or for a reducer
+
+The last one is app_data_t, used to solve the mapper
+and reducer threads. Mutex and condition variable are
+used to synchronize the threads. 
+
+__________________________________________________________
+
 `Mapper thread`
 
 All mapper threads find a perfect powers from input data and store them to linked list.
 These data will be used by reducer threads later.
 __________________________________________________________
+
 `Reducer thread`
 
 All reducer threads can process data once all mapper threads done their job.
