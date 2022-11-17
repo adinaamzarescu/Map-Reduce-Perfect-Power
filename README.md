@@ -46,7 +46,7 @@ at the same time.
 
 __________________________________________________________
 
-##`Mapper thread`
+## `Mapper thread`
 
 All mapper threads find a perfect powers from input data 
 and store them to linked list.
@@ -54,7 +54,7 @@ These data will be used by reducer threads later.
 
 __________________________________________________________
 
-##`Reducer thread`
+## `Reducer thread`
 
 All reducer threads can process data once all mapper 
 threads done their job.
